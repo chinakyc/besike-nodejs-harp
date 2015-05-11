@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var miniHarp = require("..")
 var argv = require("minimist")(process.argv.slice(2))
 port = argv['port'] || 4000;
