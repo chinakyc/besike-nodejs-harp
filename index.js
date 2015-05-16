@@ -9,14 +9,14 @@ function _connect(dir) {
     var app = connect();
 
     app
-		.use(function (req, res, next) {
+        .use(function (req, res, next) {
             extname = path.extname(req.url);
             if (extname == '.jade' || extname == '.less') {
                 res.writeHead(404, {"Content-Type": 'text/plain'});
-				res.end();
+                res.end();
             }
-		    next();
-		})
+            next();
+        })
         .use(function (req, res, next) {
             if (req.url === '/') {
                 req.url = '/index.html';
